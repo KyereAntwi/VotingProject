@@ -38,14 +38,15 @@
 
         public static class VotersRegister 
         {
-            public static readonly string Vote = $"/{Base1}/Voter/Vote";
-            public static readonly string GenerateVoterCode = $"/{Base1}/Voter/Code";
+            public const string Vote = Base1 + "/Voter/Vote";
+            public const string GenerateVoterCode = Base1 + "/Voter/Code";
         }
 
         public static class Auth 
         {
             public const string Login = Base1 + "/Identity/Login";
             public const string Register = Base1 + "/Identity/Register";
+            public const string PerformMasterRegistration = Base1 + "/Identity/Master/Register";
         }
     }
 }

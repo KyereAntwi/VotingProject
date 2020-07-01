@@ -2,14 +2,12 @@
 
 namespace Contracts.ViewModels.V1
 {
-    public class UserRegistrationRequest
+    public class UserLoginRequest
     {
         [Required]
         [StringLength(15, MinimumLength = 6)]
         public string Username { get; set; }
-        [StringLength(15,MinimumLength = 8)]
+        [StringLength(15, MinimumLength = 6)]
         public string Password { get; set; }
-        [Required]
-        public string Role { get; set; }
     }
 }
