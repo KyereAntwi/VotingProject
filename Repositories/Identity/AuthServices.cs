@@ -21,6 +21,22 @@ namespace Repositories.Identity
             _jwtSettings = jwtSettings;
         }
 
+        public async Task<bool> DeleteAUserAsync(string username)
+        {
+            var existedUser = await _userManager.FindByNameAsync(username);
+
+            if (existedUser == null) 
+            {
+                return false;
+            }
+
+            var deletionResponse = await _userManager.DeleteAsync(existedUser);
+
+            if (!deletionResponse.Succeeded)
+                return false;
+            return true;
+        }
+
         public async Task<AuthenticationResult> LoginWithoutPasswordAsync(string username)
         {
             var existingUser = await _userManager.FindByNameAsync(username);

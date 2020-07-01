@@ -47,6 +47,7 @@
             public const string Login = Base1 + "/Identity/Login";
             public const string Register = Base1 + "/Identity/Register";
             public const string PerformMasterRegistration = Base1 + "/Identity/Master/Register";
+            public const string DeleteUser = Base1 + "/Identity/DeleteUser/{Username}";
         }
     }
 }

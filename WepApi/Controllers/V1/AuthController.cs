@@ -134,5 +134,24 @@ namespace WepApi.Controllers.V1
             // if gets here then the implementation is correct
             return Ok(new AuthSuccessResponse { Token = result.Token });
         }
+
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
+        [HttpDelete(ApiRoutes.Auth.DeleteUser)]
+        public async Task<IActionResult> DeleteAUserAsync([FromRoute] string Username) 
+        {
+            if (string.IsNullOrEmpty(Username)) 
+            {
+                return BadRequest(new AuthFailedResponse { Errors = new[] { "No username was provided" } });
+            }
+
+            bool result = await _authServices.DeleteAUserAsync(Username);
+
+            if (!result) 
+            {
+                return BadRequest(new AuthFailedResponse { Errors = new[] { "Sorry operation failed" } });
+            }
+
+            return Ok();
+        }
     }
 }

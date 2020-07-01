@@ -9,5 +9,6 @@ namespace Repositories.Identity
         Task<AuthenticationResult> RegisterWithoutPasswordAsync(string username, string role);
         Task<AuthenticationResult> LoginWithPasswordAsync(string username, string password);
         Task<AuthenticationResult> LoginWithoutPasswordAsync(string username);
+        Task<bool> DeleteAUserAsync(string username);
     }
 }
