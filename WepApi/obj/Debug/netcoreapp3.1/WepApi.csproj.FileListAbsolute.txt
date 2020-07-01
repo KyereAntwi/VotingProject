@@ -55,9 +55,6 @@ E:\BackUps\Projects\DevWeb\VotingProject\WepApi\bin\Debug\netcoreapp3.1\Reposito
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\WepApi.csprojAssemblyReference.cache
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\WepApi.AssemblyInfoInputs.cache
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\WepApi.AssemblyInfo.cs
-E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\WepApi.csproj.CoreCompileInputs.cache
-E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\WepApi.MvcApplicationPartsAssemblyInfo.cs
-E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\WepApi.MvcApplicationPartsAssemblyInfo.cache
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\WepApi.RazorTargetAssemblyInfo.cache
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\WepApi.csproj.CopyComplete
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\staticwebassets\WepApi.StaticWebAssets.Manifest.cache
