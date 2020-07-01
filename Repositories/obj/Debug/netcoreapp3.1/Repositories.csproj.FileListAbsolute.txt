@@ -8,7 +8,6 @@ E:\BackUps\Projects\DevWeb\VotingProject\Repositories\bin\Debug\netcoreapp3.1\Re
 E:\BackUps\Projects\DevWeb\VotingProject\Repositories\bin\Debug\netcoreapp3.1\Repositories.pdb
 E:\BackUps\Projects\DevWeb\VotingProject\Repositories\bin\Debug\netcoreapp3.1\DTOs.dll
 E:\BackUps\Projects\DevWeb\VotingProject\Repositories\bin\Debug\netcoreapp3.1\DTOs.pdb
-E:\BackUps\Projects\DevWeb\VotingProject\Repositories\obj\Debug\netcoreapp3.1\Repositories.csproj.CoreCompileInputs.cache
 E:\BackUps\Projects\DevWeb\VotingProject\Repositories\obj\Debug\netcoreapp3.1\Repositories.csproj.CopyComplete
 E:\BackUps\Projects\DevWeb\VotingProject\Repositories\obj\Debug\netcoreapp3.1\Repositories.dll
 E:\BackUps\Projects\DevWeb\VotingProject\Repositories\obj\Debug\netcoreapp3.1\Repositories.pdb

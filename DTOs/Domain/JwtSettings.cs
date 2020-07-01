@@ -1,4 +1,4 @@
-﻿namespace WepApi.Helpers
+﻿namespace DTOs.Domain
 {
     public class JwtSettings
     {

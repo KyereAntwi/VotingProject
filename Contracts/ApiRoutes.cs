@@ -41,5 +41,11 @@
             public static readonly string Vote = $"/{Base1}/Voter/Vote";
             public static readonly string GenerateVoterCode = $"/{Base1}/Voter/Code";
         }
+
+        public static class Auth 
+        {
+            public const string Login = Base1 + "/Identity/Login";
+            public const string Register = Base1 + "/Identity/Register";
+        }
     }
 }
