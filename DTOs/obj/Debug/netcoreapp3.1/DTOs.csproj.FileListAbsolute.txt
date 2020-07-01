@@ -1,0 +1,9 @@
+E:\BackUps\Projects\DevWeb\VotingProject\DTOs\bin\Debug\netcoreapp3.1\DTOs.deps.json
+E:\BackUps\Projects\DevWeb\VotingProject\DTOs\bin\Debug\netcoreapp3.1\DTOs.dll
+E:\BackUps\Projects\DevWeb\VotingProject\DTOs\bin\Debug\netcoreapp3.1\DTOs.pdb
+E:\BackUps\Projects\DevWeb\VotingProject\DTOs\obj\Debug\netcoreapp3.1\DTOs.csprojAssemblyReference.cache
+E:\BackUps\Projects\DevWeb\VotingProject\DTOs\obj\Debug\netcoreapp3.1\DTOs.AssemblyInfoInputs.cache
+E:\BackUps\Projects\DevWeb\VotingProject\DTOs\obj\Debug\netcoreapp3.1\DTOs.AssemblyInfo.cs
+E:\BackUps\Projects\DevWeb\VotingProject\DTOs\obj\Debug\netcoreapp3.1\DTOs.csproj.CoreCompileInputs.cache
+E:\BackUps\Projects\DevWeb\VotingProject\DTOs\obj\Debug\netcoreapp3.1\DTOs.dll
+E:\BackUps\Projects\DevWeb\VotingProject\DTOs\obj\Debug\netcoreapp3.1\DTOs.pdb

@@ -15,6 +15,13 @@
 
 
   <ItemGroup>
+    <ProjectReference Include="..\Contracts\Contracts.csproj" />
+    <ProjectReference Include="..\DTOs\DTOs.csproj" />
+    <ProjectReference Include="..\Repositories\Repositories.csproj" />
+  </ItemGroup>
+
+
+  <ItemGroup>
     <Folder Include="Controllers\" />
   </ItemGroup>
 
