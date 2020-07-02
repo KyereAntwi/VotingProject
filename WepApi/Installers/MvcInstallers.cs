@@ -8,6 +8,7 @@ namespace WepApi.Installers
         public void InstallServices(IConfiguration configuration, IServiceCollection services)
         {
             services.AddControllers();
+            services.AddAuthorization();
         }
     }
 }
