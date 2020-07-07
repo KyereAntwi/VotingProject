@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using DTOs.Domain;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace DTOs.Data
@@ -9,5 +10,7 @@ namespace DTOs.Data
             : base(options)
         {
         }
+
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
     }
 }

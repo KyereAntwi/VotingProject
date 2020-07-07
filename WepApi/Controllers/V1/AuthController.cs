@@ -132,7 +132,37 @@ namespace WepApi.Controllers.V1
             }
 
             // if gets here then the implementation is correct
-            return Ok(new AuthSuccessResponse { Token = result.Token });
+            return Ok(new AuthSuccessResponse { Token = result.Token, RefreshToken = result.RefreshToken  });
+        }
+
+        [HttpPost(ApiRoutes.Auth.Refresh)]
+        public async Task<IActionResult> RefreshAsync([FromBody] RefreshTokenRequest request) 
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(new AuthFailedResponse
+                {
+                    Errors = ModelState.Values.SelectMany(x => x.Errors.Select(xx => xx.ErrorMessage))
+                });
+            }
+
+            AuthenticationResult result = new AuthenticationResult
+            {
+                Success = false
+            };
+
+            var authResponse = await _authServices.RefreshTokenAsync(request.Token, request.RefreshToken);
+
+            if (!result.Success)
+            {
+                return BadRequest(new AuthFailedResponse
+                {
+                    Errors = result.Errors
+                });
+            }
+
+            // if gets here then the implementation is correct
+            return Ok(new AuthSuccessResponse { Token = result.Token, RefreshToken = result.RefreshToken });
         }
 
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
