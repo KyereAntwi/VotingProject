@@ -9,12 +9,12 @@ namespace WepApi.Installers
     {
         public void InstallServices(IConfiguration configuration, IServiceCollection services)
         {
-            services.AddDbContext<DbContext>(options =>
+            services.AddDbContext<DTOs.Data.DbContext>(options =>
                 options.UseSqlServer(
-                    configuration.GetConnectionString("DefaultConnection")));
+                    configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("WepApi")));
             services.AddIdentityCore<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddRoles<IdentityRole>()
-                .AddEntityFrameworkStores<DbContext>();
+                .AddEntityFrameworkStores<DTOs.Data.DbContext>();
         }
     }
 }

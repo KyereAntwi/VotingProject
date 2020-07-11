@@ -62,3 +62,13 @@ E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\staticwe
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\WepApi.dll
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\WepApi.pdb
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\WepApi.genruntimeconfig.cache
+E:\BackUps\Projects\DevWeb\VotingProject\WepApi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\BackUps\Projects\DevWeb\VotingProject\WepApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\BackUps\Projects\DevWeb\VotingProject\WepApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+E:\BackUps\Projects\DevWeb\VotingProject\WepApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+E:\BackUps\Projects\DevWeb\VotingProject\WepApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\BackUps\Projects\DevWeb\VotingProject\WepApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+E:\BackUps\Projects\DevWeb\VotingProject\WepApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\BackUps\Projects\DevWeb\VotingProject\WepApi\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\WepApi.csproj.CoreCompileInputs.cache
+E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\WepApi.MvcApplicationPartsAssemblyInfo.cache
