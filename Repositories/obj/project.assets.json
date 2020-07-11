@@ -1443,6 +1443,16 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Contracts.dll": {}
+        }
+      },
       "DTOs/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -5377,6 +5387,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "Contracts/1.0.0": {
+      "type": "project",
+      "path": "../Contracts/Contracts.csproj",
+      "msbuildProject": "../Contracts/Contracts.csproj"
+    },
     "DTOs/1.0.0": {
       "type": "project",
       "path": "../DTOs/DTOs.csproj",
@@ -5385,6 +5400,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Contracts >= 1.0.0",
       "DTOs >= 1.0.0",
       "MediatR >= 8.0.2",
       "MediatR.Extensions.Microsoft.DependencyInjection >= 8.0.1",
@@ -5429,6 +5445,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
+            "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\Contracts\\Contracts.csproj": {
+              "projectPath": "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\Contracts\\Contracts.csproj"
+            },
             "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\DTOs\\DTOs.csproj": {
               "projectPath": "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\DTOs\\DTOs.csproj"
             }

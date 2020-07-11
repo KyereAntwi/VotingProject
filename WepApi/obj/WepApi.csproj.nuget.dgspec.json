@@ -159,6 +159,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\Contracts\\Contracts.csproj": {
+                "projectPath": "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\Contracts\\Contracts.csproj"
+              },
               "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\DTOs\\DTOs.csproj": {
                 "projectPath": "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\DTOs\\DTOs.csproj"
               }

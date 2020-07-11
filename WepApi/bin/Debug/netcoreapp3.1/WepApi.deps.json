@@ -27,6 +27,7 @@
           "Contracts": "1.0.0",
           "DTOs": "1.0.0",
           "MediatR": "8.0.2",
+          "MediatR.Extensions.Microsoft.DependencyInjection": "8.0.1",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "3.1.5",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "3.1.2",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.2",
@@ -1534,6 +1535,7 @@
       },
       "Repositories/1.0.0": {
         "dependencies": {
+          "Contracts": "1.0.0",
           "DTOs": "1.0.0",
           "MediatR": "8.0.2",
           "MediatR.Extensions.Microsoft.DependencyInjection": "8.0.1",
