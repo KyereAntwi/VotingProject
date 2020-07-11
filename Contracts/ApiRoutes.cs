@@ -6,11 +6,11 @@
 
         public static class Polls
         {
-            public static readonly string CreateNewPoll = $"/{Base1}/Poll";
-            public static readonly string UpdatePoll = $"/{Base1}/Poll/" + "{Id}";
-            public static readonly string DeletePoll = $"/{Base1}/Poll/" + "{Id}";
-            public static readonly string GetSinglePoll = $"/{Base1}/Poll/" + "{Id}";
-            public static readonly string GetAllPolls = $"/{Base1}/Poll";
+            public const string CreateNewPoll = Base1 + "/Poll";
+            public const string UpdatePoll = Base1 + "/Poll/{Id}";
+            public const string DeletePoll = Base1 + "/Poll/{Id}";
+            public const string GetSinglePoll = Base1 + "/Poll/{Id}";
+            public const string GetAllPolls = Base1 + "/Poll";
         }
 
         public static class Categories

@@ -12,4 +12,3 @@ E:\BackUps\Projects\DevWeb\VotingProject\Repositories\obj\Debug\netcoreapp3.1\Re
 E:\BackUps\Projects\DevWeb\VotingProject\Repositories\obj\Debug\netcoreapp3.1\Repositories.dll
 E:\BackUps\Projects\DevWeb\VotingProject\Repositories\obj\Debug\netcoreapp3.1\Repositories.pdb
 E:\BackUps\Projects\DevWeb\VotingProject\Repositories\obj\Debug\netcoreapp3.1\Repositories.genruntimeconfig.cache
-E:\BackUps\Projects\DevWeb\VotingProject\Repositories\obj\Debug\netcoreapp3.1\Repositories.csproj.CoreCompileInputs.cache
