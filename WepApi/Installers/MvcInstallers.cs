@@ -1,5 +1,4 @@
-﻿using MediatR;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace WepApi.Installers
@@ -10,7 +9,6 @@ namespace WepApi.Installers
         {
             services.AddControllers();
             services.AddAuthorization();
-            services.AddMediatR(typeof(Startup));
         }
     }
 }

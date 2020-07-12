@@ -71,6 +71,7 @@ namespace WepApi.Controllers.V1
             return CreatedAtAction(nameof(GetPollByIdAsync), new { Id = result.Id }, result);
         }
 
+        [HttpDelete(ApiRoutes.Polls.DeletePoll)]
         public async Task<IActionResult> DeletePollAsync([FromRoute] Guid Id) 
         {
             if (Id == Guid.Empty)
