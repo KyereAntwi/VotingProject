@@ -16,15 +16,15 @@
         public static class Categories
         {
             // polls categories operations
-            public static readonly string CreateACategoryForPoll = $"/{Base1}/Poll/" + "{PollId}/Category";
-            public static readonly string GetAllCategoriesOfPoll = $"/{Base1}/Poll/"+ "{PollId}/Category";
+            public const string CreateACategoryForPoll = Base1 + "/Poll/{PollId}/Category";
+            public const string GetAllCategoriesOfPoll = Base1 + "/Poll/{PollId}/Category";
 
-            public static readonly string GetSingleCategoryOfPoll = $"/{Base1}/Category/" + "{Id}";
-            public static readonly string RemoveACategoryOfPoll = $"/{Base1}/Category/" + "{Id}";
+            public const string GetSingleCategoryOfPoll = Base1 + "/Category/{Id}";
+            public const string RemoveACategoryOfPoll = Base1 + "/Category/{Id}";
 
             // polls category nominees operations
-            public static readonly string AddNomineeToCategory = $"/{Base1}/Category/" + "{CategoryId}/Nominee/{NomineeId}";
-            public static readonly string RemoveNomineeFromCategory = $"/{Base1}/Category/" + "{CategoryId}/Nominee/{NomineeId}";
+            public const string AddNomineeToCategory = Base1 + "/Category/{CategoryId}/Nominee/{NomineeId}";
+            public const string RemoveNomineeFromCategory = Base1 + "/Category/{CategoryId}/Nominee/{NomineeId}";
         }
 
         public static class Nominees 

@@ -14,6 +14,12 @@ namespace WepApi.Installers
             services.AddMediatR(typeof(GetAllPollsHandler));
             services.AddMediatR(typeof(GetPollByIdHandler));
             services.AddMediatR(typeof(DeletePollHandler));
+            services.AddMediatR(typeof(AddNomineeToCategoryHandler));
+            services.AddMediatR(typeof(CreateCategoryHandler));
+            services.AddMediatR(typeof(GetAllCategoriesOfPollHandler));
+            services.AddMediatR(typeof(GetCategoryByIdHandler));
+            services.AddMediatR(typeof(RemoveCategoryHandler));
+            services.AddMediatR(typeof(RemoveNomineeFromCategoryHandler));
         }
     }
 }
