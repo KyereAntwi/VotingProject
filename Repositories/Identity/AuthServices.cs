@@ -64,7 +64,8 @@ namespace Repositories.Identity
                 UserName = username
             };
 
-            return await GenerateTokenAsync(newUser);
+            var role = await _userManager.GetRolesAsync(existingUser);
+            return await GenerateTokenAsync(newUser, role[0]);
         }
 
         public async Task<AuthenticationResult> LoginWithPasswordAsync(string username, string password)
@@ -96,7 +97,8 @@ namespace Repositories.Identity
                 };
             }
 
-            return await GenerateTokenAsync(newUser);
+            var role = await _userManager.GetRolesAsync(existingUser);
+            return await GenerateTokenAsync(newUser, role[0]);
         }
 
         public async Task<AuthenticationResult> RefreshTokenAsync(string token, string refreshToken)
@@ -134,7 +136,9 @@ namespace Repositories.Identity
             await _dbContext.SaveChangesAsync();
 
             var user = await _userManager.FindByIdAsync(validatedToken.Claims.Single(x => x.Type == "id").Value);
-            return await GenerateTokenAsync(user);
+
+            var role = await _userManager.GetRolesAsync(user);
+            return await GenerateTokenAsync(user, role[0]);
         }
 
         private ClaimsPrincipal GetPrincipalFronToken(string token) 
@@ -237,7 +241,7 @@ namespace Repositories.Identity
         }
 
         // private method to generate a token
-        private async Task<AuthenticationResult> GenerateTokenAsync(IdentityUser newUser)
+        private async Task<AuthenticationResult> GenerateTokenAsync(IdentityUser newUser, string role)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_jwtSettings.Secret);
@@ -247,7 +251,8 @@ namespace Repositories.Identity
                 {
                     new Claim(JwtRegisteredClaimNames.Sub, newUser.UserName),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                    new Claim("id", newUser.Id)
+                    new Claim("id", newUser.Id),
+                    new Claim("role", role)
                 }),
                 Expires = DateTime.UtcNow.Add(_jwtSettings.TokenLifeTime),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha512Signature)

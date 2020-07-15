@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using WepApi.Helpers;
 using WepApi.Installers;
 
 namespace WepApi
@@ -32,16 +33,29 @@ namespace WepApi
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
+
+            ////swagger options configurations
+            //var swaggerOptions = new SwaggerOptions();
+            //Configuration.GetSection(nameof(SwaggerOptions)).Bind(swaggerOptions);
+            //app.UseSwagger(options => 
+            //{
+            //    options.RouteTemplate = swaggerOptions.JsonRoute;
+            //});
+            //app.UseSwaggerUI(options =>
+            //{
+            //    options.SwaggerEndpoint(swaggerOptions.UIEndpoint, swaggerOptions.Description);
+            //});
+
+            app.UseCors("CorsPolicy");
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
 
             app.UseAuthentication();
-            //app.UseAuthorization();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

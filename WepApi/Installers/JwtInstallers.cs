@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
+using System.Collections.Generic;
 using System.Text;
 
 namespace WepApi.Installers
@@ -38,6 +39,29 @@ namespace WepApi.Installers
                     x.SaveToken = true;
                     x.TokenValidationParameters = tokenValidationParameter;
                 });
+
+            services.AddCors(
+                options => options
+                .AddPolicy("CorsPolicy",
+                builder => { builder.AllowAnyMethod().AllowAnyHeader().WithOrigins("*").AllowCredentials(); }));
+
+            //// services for swagger
+            //services.AddSwaggerGen(x =>
+            //{
+            //    x.SwaggerDoc("V1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Application APi", Version = "V1" });
+            //    var security = new Dictionary<string, IEnumerable<string>>
+            //    {
+            //        { "Bearer", new string[0] }
+            //    };
+            //    x.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme 
+            //    {
+            //        Description = "JWT Authorization",
+            //        Name = "Authorization",
+            //        In = Microsoft.OpenApi.Models.ParameterLocation.Header,
+            //        Type = Microsoft.OpenApi.Models.SecuritySchemeType.ApiKey
+            //    });
+            //    x.AddSecurityRequirement(security);
+            //});
         }
     }
 }

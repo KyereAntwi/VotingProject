@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Repositories.Categories;
 using Repositories.Identity;
+using Repositories.Nominees;
 using Repositories.Polls;
 
 namespace WepApi.Installers
@@ -11,6 +13,8 @@ namespace WepApi.Installers
         {
             services.AddScoped<IAuthServices, AuthServices>();
             services.AddScoped<IPollsRepository, PollsRepository>();
+            services.AddScoped<INomineeRepository, NomineeRepository>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
         }
     }
 }

@@ -29,11 +29,11 @@
 
         public static class Nominees 
         {
-            public static readonly string AddNewNominee = $"/{Base1}/Nominee";
-            public static readonly string DeleteNominee = $"/{Base1}/Nominee/" + "{Id}";
-            public static readonly string UpdateNominee = $"/{Base1}/Nominee/" + "{Id}";
-            public static readonly string GetAllNominees = $"/{Base1}/Nominee";
-            public static readonly string GetASingleNominee = $"/{Base1}/Nominee/" + "{Id}";
+            public const string AddNewNominee = Base1 + "/Nominee";
+            public const string DeleteNominee = Base1 + "/Nominee/{Id}";
+            public const string UpdateNominee = Base1 + "/Nominee/{Id}";
+            public const string GetAllNominees = Base1 + "/Nominee";
+            public const string GetASingleNominee = Base1 + "/Nominee/{Id}";
         }
 
         public static class VotersRegister 

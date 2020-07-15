@@ -20,6 +20,10 @@ namespace WepApi.Installers
             services.AddMediatR(typeof(GetCategoryByIdHandler));
             services.AddMediatR(typeof(RemoveCategoryHandler));
             services.AddMediatR(typeof(RemoveNomineeFromCategoryHandler));
+            services.AddMediatR(typeof(CreateANomineeHandler));
+            services.AddMediatR(typeof(GetAllNomineesHandler));
+            services.AddMediatR(typeof(GetASingleNomineeHandler));
+            services.AddMediatR(typeof(DeleteNomineeHandler));
         }
     }
 }

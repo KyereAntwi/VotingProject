@@ -9,7 +9,7 @@ namespace DTOs.DTOs
         [Key]
         public Guid Id { get; set; }
         public string Fullname { get; set; }
-        public Uri ImageUrl { get; set; }
+        public string ImageUrl { get; set; }
         public virtual ICollection<CategoryNomineeDto> CategoryNomineeDtos { get; set; }
     }
 }

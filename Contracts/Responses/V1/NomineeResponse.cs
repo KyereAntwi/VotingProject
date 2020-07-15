@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Contracts.Responses.V1
 {
@@ -6,6 +7,7 @@ namespace Contracts.Responses.V1
     {
         public Guid Id { get; set; }
         public string Fullname { get; set; }
-        public Uri ImageUrl { get; set; }
+        public string ImageUrl { get; set; }
+        public IEnumerable<CategoryResponse> Categories { get; set; }
     }
 }

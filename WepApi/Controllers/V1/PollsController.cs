@@ -14,7 +14,7 @@ using Repositories.Querries;
 namespace WepApi.Controllers.V1
 {
     [ApiController]
-    // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class PollsController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -49,6 +49,7 @@ namespace WepApi.Controllers.V1
         }
 
         [HttpPost(ApiRoutes.Polls.CreateNewPoll)]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
         public async Task<IActionResult> AddAPollAsync([FromBody] NewPollRequest request) 
         {
             if (!ModelState.IsValid) 
@@ -72,6 +73,7 @@ namespace WepApi.Controllers.V1
         }
 
         [HttpDelete(ApiRoutes.Polls.DeletePoll)]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
         public async Task<IActionResult> DeletePollAsync([FromRoute] Guid Id) 
         {
             if (Id == Guid.Empty)
