@@ -78,6 +78,3 @@ E:\BackUps\Projects\DevWeb\VotingProject\WepApi\bin\Debug\netcoreapp3.1\Microsof
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
-E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\WepApi.csproj.CoreCompileInputs.cache
-E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\WepApi.MvcApplicationPartsAssemblyInfo.cs
-E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\WepApi.MvcApplicationPartsAssemblyInfo.cache

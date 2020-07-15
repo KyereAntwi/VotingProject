@@ -4,6 +4,7 @@ using Repositories.Categories;
 using Repositories.Identity;
 using Repositories.Nominees;
 using Repositories.Polls;
+using Repositories.Vote;
 
 namespace WepApi.Installers
 {
@@ -15,6 +16,7 @@ namespace WepApi.Installers
             services.AddScoped<IPollsRepository, PollsRepository>();
             services.AddScoped<INomineeRepository, NomineeRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IVoteRepository, VoteRepository>();
         }
     }
 }

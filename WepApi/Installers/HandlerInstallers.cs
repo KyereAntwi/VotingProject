@@ -24,6 +24,7 @@ namespace WepApi.Installers
             services.AddMediatR(typeof(GetAllNomineesHandler));
             services.AddMediatR(typeof(GetASingleNomineeHandler));
             services.AddMediatR(typeof(DeleteNomineeHandler));
+            services.AddMediatR(typeof(VoteHandler));
         }
     }
 }
