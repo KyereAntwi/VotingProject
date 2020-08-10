@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Repositories.Identity;
+using WepApi.Helpers;
 
 namespace WepApi.Controllers.V1
 {
@@ -182,6 +183,24 @@ namespace WepApi.Controllers.V1
             }
 
             return Ok();
+        }
+
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "EC-Official")]
+        [HttpGet(ApiRoutes.VotersRegister.GenerateVoterCode)]
+        public async Task<IActionResult> GenerateUsernameAsync() 
+        {
+            GenerateRandom generateRandom = new GenerateRandom();
+            string newUsername = generateRandom.RandomChar();
+
+            var result = await _authServices.IsUsernameExisting(newUsername);
+
+            while (result == true)
+            {
+                newUsername = generateRandom.RandomChar();
+                result = await _authServices.IsUsernameExisting(newUsername);
+            }
+
+            return Ok(new { Username = newUsername });
         }
     }
 }

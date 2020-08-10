@@ -279,5 +279,13 @@ namespace Repositories.Identity
                 RefreshToken = refreshToken.Token
             };
         }
+
+        public async Task<bool> IsUsernameExisting(string username)
+        {
+            var user = await _userManager.FindByNameAsync(username);
+            if (user != null)
+                return true;
+            return false;
+        }
     }
 }

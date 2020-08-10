@@ -10,6 +10,7 @@ namespace WepApi.Installers
         {
             services.AddControllers();
             services.AddAuthorization();
+            services.AddMvc();
 
             services.Configure<FormOptions>(o => {
                 o.ValueLengthLimit = int.MaxValue;

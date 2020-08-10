@@ -11,5 +11,6 @@ namespace Repositories.Identity
         Task<AuthenticationResult> LoginWithoutPasswordAsync(string username);
         Task<bool> DeleteAUserAsync(string username);
         Task<AuthenticationResult> RefreshTokenAsync(string token, string refreshToken);
+        Task<bool> IsUsernameExisting(string username);
     }
 }

@@ -43,7 +43,7 @@ namespace WepApi.Installers
             services.AddCors(
                 options => options
                 .AddPolicy("CorsPolicy",
-                builder => { builder.AllowAnyMethod().AllowAnyHeader().WithOrigins("*").AllowCredentials(); }));
+                builder => { builder.AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin(); }));
 
             //// services for swagger
             //services.AddSwaggerGen(x =>
