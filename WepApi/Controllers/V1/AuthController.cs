@@ -6,6 +6,7 @@ using Contracts.ViewModels.V1;
 using DTOs.Domain;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Repositories.Identity;
 using WepApi.Helpers;
@@ -16,10 +17,12 @@ namespace WepApi.Controllers.V1
     public class AuthController : ControllerBase
     {
         private readonly IAuthServices _authServices;
+        private readonly UserManager<IdentityUser> _userManager;
 
-        public AuthController(IAuthServices authServices)
+        public AuthController(IAuthServices authServices, UserManager<IdentityUser> userManager)
         {
             _authServices = authServices;
+            _userManager = userManager;
         }
 
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator, EC-Official")]
@@ -58,7 +61,7 @@ namespace WepApi.Controllers.V1
             }
 
             // if gets here then the implementation is correct
-            return Ok(new AuthSuccessResponse { Token = "Secret" });
+            return Ok(new AuthSuccessResponse { Token = result.Token, RefreshToken = result.RefreshToken });
         }
 
         [HttpPost(ApiRoutes.Auth.PerformMasterRegistration)]
@@ -67,7 +70,7 @@ namespace WepApi.Controllers.V1
             UserRegistrationRequest request = new UserRegistrationRequest 
             {
                 Username = "MasterUser",
-                Password = "MasterPasswordForVotes",
+                Password = "MasterPassword",
                 Role = "Administrator"
             };
 
@@ -95,7 +98,7 @@ namespace WepApi.Controllers.V1
             }
 
             // if gets here then the implementation is correct
-            return Ok(new AuthSuccessResponse { Token = "Secret" });
+            return Ok(new AuthSuccessResponse { Token = result.Token, RefreshToken = result.RefreshToken });
         }
 
         [HttpPost(ApiRoutes.Auth.Login)]
@@ -132,8 +135,21 @@ namespace WepApi.Controllers.V1
                 });
             }
 
+            var roles = await _userManager.GetRolesAsync(await _userManager.FindByNameAsync(request.Username));
+
+            var response = new AuthSuccessResponse
+            {
+                Token = result.Token,
+                RefreshToken = result.RefreshToken,
+                User = new ApplicationUserResponse 
+                {
+                    Username = request.Username,
+                    Role = roles[0]
+                }
+            };
+
             // if gets here then the implementation is correct
-            return Ok(new AuthSuccessResponse { Token = result.Token, RefreshToken = result.RefreshToken  });
+            return Ok(response);
         }
 
         [HttpPost(ApiRoutes.Auth.Refresh)]

@@ -1,0 +1,15 @@
+.categories-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+
+.categories-list .head {
+  text-align: center;
+  font-family: "Segoe UI";
+  font-size: 4rem;
+  color: white;
+  margin-bottom: 30px;
+}

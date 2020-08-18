@@ -98,7 +98,7 @@ namespace Repositories.Identity
             }
 
             var role = await _userManager.GetRolesAsync(existingUser);
-            return await GenerateTokenAsync(newUser, role[0]);
+            return await GenerateTokenAsync(existingUser, role[0]);
         }
 
         public async Task<AuthenticationResult> RefreshTokenAsync(string token, string refreshToken)
@@ -262,6 +262,7 @@ namespace Repositories.Identity
 
             var refreshToken = new RefreshToken 
             {
+                Token = token.Id,
                 JwtId = token.Id,
                 UserId = newUser.Id,
                 CreatedAt = DateTime.UtcNow,

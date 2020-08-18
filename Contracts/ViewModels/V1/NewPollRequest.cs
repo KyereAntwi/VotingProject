@@ -10,8 +10,8 @@ namespace Contracts.ViewModels.V1
         [Required]
         public string Description { get; set; }
         [Required]
-        public DateTime StartedDateTime { get; set; }
+        public string StartedDateTime { get; set; }
         [Required]
-        public DateTime EndedDateTime { get; set; }
+        public string EndedDateTime { get; set; }
     }
 }

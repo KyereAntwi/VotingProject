@@ -1,4 +1,8 @@
 ﻿using DTOs.DTOs;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Repositories.Vote
@@ -10,6 +14,14 @@ namespace Repositories.Vote
         public VoteRepository(DTOs.Data.DbContext dbContext)
         {
             _db = dbContext;
+        }
+
+        public async Task<List<VoteDto>> GetAllVotesOfCategoryAsync(Guid CategoryId)
+        {
+            return await _db.VoteDtos
+                .Include(vote => vote.User)
+                .Where(vote => vote.CategoryDtoId == CategoryId)
+                .ToListAsync();
         }
 
         public async Task<VoteDto> PerformVoteAsync(VoteDto vote)

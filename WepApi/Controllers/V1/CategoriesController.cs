@@ -5,6 +5,7 @@ using Contracts.ViewModels.V1;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Repositories.Commands;
 using Repositories.Querries;
@@ -16,16 +17,26 @@ namespace WepApi.Controllers.V1
     public class CategoriesController : ControllerBase
     {
         private readonly IMediator _mediator;
+        private readonly UserManager<IdentityUser> _userManager;
 
-        public CategoriesController(IMediator mediator)
+        public CategoriesController(IMediator mediator, UserManager<IdentityUser> userManager)
         {
             _mediator = mediator;
+            _userManager = userManager;
         }
 
         [HttpGet(ApiRoutes.Categories.GetAllCategoriesOfPoll)]
         public async Task<IActionResult> GetAllCategoriesOfAPollAsync([FromRoute] Guid PollId) 
         {
             var querry = new GetAllCategoriesOfPollQuery(PollId);
+            var result = await _mediator.Send(querry);
+            return Ok(result);
+        }
+
+        public async Task<IActionResult> GetAllCategoriesOfAPollAvailableAsync([FromQuery] Guid PollId) 
+        {
+            var user = await _userManager.GetUserAsync(User);
+            var querry = new GetAllCategoriesOfPollAvailableQuery(PollId, user);
             var result = await _mediator.Send(querry);
             return Ok(result);
         }

@@ -34,6 +34,7 @@ namespace Repositories.Handlers
 
             return new CategoryResponse
             {
+                Id = response.Id,
                 Theme = response.Theme,
                 PollId = response.PollDtoId
             };

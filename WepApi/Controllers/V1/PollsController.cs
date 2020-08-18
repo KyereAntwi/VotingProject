@@ -66,8 +66,8 @@ namespace WepApi.Controllers.V1
                 Theme = request.Theme,
                 Description = request.Description,
                 CreatedAt = DateTime.Now,
-                StartedDateTime = request.StartedDateTime,
-                EndedDateTime = request.EndedDateTime
+                StartedDateTime = Convert.ToDateTime(request.StartedDateTime),
+                EndedDateTime = Convert.ToDateTime(request.EndedDateTime)
             });
             return CreatedAtAction(nameof(GetPollByIdAsync), new { Id = result.Id }, result);
         }
