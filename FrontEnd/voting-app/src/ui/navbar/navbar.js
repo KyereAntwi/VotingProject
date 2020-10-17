@@ -6,11 +6,10 @@ import { UserContext } from "../../store/contexts/user-context";
 import "./navbar.css";
 
 const Navbar = (props) => {
-  const { user, setUser } = useContext(UserContext);
+  const { user, logout } = useContext(UserContext);
 
   const handleLogout = () => {
-    localStorage.removeItem("token");
-    setUser();
+    logout();
     props.history.push("/login");
   };
 
@@ -21,7 +20,7 @@ const Navbar = (props) => {
         <nav>
           <ul>
             <li>
-              <NavLink to="/">Getting Started Page</NavLink>
+              <NavLink to="/start">Getting Started Page</NavLink>
             </li>
             <li>
               <NavLink to="/administrator">Administration</NavLink>

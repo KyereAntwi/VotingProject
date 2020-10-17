@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Repositories.Categories
@@ -53,7 +52,7 @@ namespace Repositories.Categories
             var category = await _dbContext.CategoryDtos
                 .Include(c => c.CategoryNomineeDtos)
                 .Include(c => c.VoteDtos)
-                .SingleOrDefaultAsync(c => c.PollDtoId == Id);
+                .SingleOrDefaultAsync(c => c.Id == Id);
 
             return category;
         }

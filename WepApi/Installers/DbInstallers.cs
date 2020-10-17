@@ -14,6 +14,7 @@ namespace WepApi.Installers
                     configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("WepApi")));
             services.AddIdentityCore<IdentityUser>(options => 
             {
+                options.User.RequireUniqueEmail = true;
                 options.Password.RequireDigit = false;
                 options.Password.RequireLowercase = false;
                 options.Password.RequireNonAlphanumeric = false;

@@ -1,8 +1,5 @@
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\bin\Debug\netcoreapp3.1\appsettings.Development.json
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\bin\Debug\netcoreapp3.1\appsettings.json
-E:\BackUps\Projects\DevWeb\VotingProject\WepApi\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
-E:\BackUps\Projects\DevWeb\VotingProject\WepApi\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.json
-E:\BackUps\Projects\DevWeb\VotingProject\WepApi\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.local.json
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\bin\Debug\netcoreapp3.1\WepApi.exe
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\bin\Debug\netcoreapp3.1\WepApi.deps.json
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\bin\Debug\netcoreapp3.1\WepApi.runtimeconfig.json

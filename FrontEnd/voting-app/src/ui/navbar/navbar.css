@@ -37,6 +37,20 @@
   cursor: pointer;
 }
 
+.header-main nav ul li button {
+  padding: 5px;
+  background-color: white;
+  color: crimson;
+  border-radius: 5px;
+  border: none;
+}
+
+.header-main nav ul li button:hover {
+  padding: 5px;
+  background-color: crimson;
+  color: white;
+}
+
 .header-main nav ul li a:hover {
   color: #6d706e;
 }

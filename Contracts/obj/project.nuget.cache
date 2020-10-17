@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "gY035vTzB6BxpHgkwB2dfD+YzbuhGxvG4wgbHmUyi4x+mtSIGEL0bGjbqgRjNXucd6tZX84PlE+1kUCDrlYCuQ==",
+  "dgSpecHash": "i61Pl9oudMJMdvcVcRwc2wcCNYJ09xXGFNUbZ/Xrr0NmY4S3+XRfAoIZC7nTI4E+oUlytPI4yb4UJDcW5dNF4Q==",
   "success": true,
   "projectFilePath": "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\Contracts\\Contracts.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kyere Antwi\\.nuget\\packages\\microsoft.aspnetcore.http.features\\3.1.5\\microsoft.aspnetcore.http.features.3.1.5.nupkg.sha512",
     "C:\\Users\\Kyere Antwi\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.5\\microsoft.extensions.primitives.3.1.5.nupkg.sha512",
-    "C:\\Users\\Kyere Antwi\\.nuget\\packages\\system.io.pipelines\\4.7.1\\system.io.pipelines.4.7.1.nupkg.sha512"
+    "C:\\Users\\Kyere Antwi\\.nuget\\packages\\system.io.pipelines\\4.7.1\\system.io.pipelines.4.7.1.nupkg.sha512",
+    "C:\\Users\\Kyere Antwi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
   ],
   "logs": []
 }

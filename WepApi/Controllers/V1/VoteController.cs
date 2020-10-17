@@ -1,30 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Contracts;
 using Contracts.ViewModels.V1;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Repositories.Commands;
 
 namespace WepApi.Controllers.V1
 {
     [ApiController]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Voter")]
     public class VoteController : ControllerBase
     {
         private readonly IMediator _mediator;
-        private readonly UserManager<IdentityUser> _userManager;
 
-        public VoteController(IMediator mediator, UserManager<IdentityUser> userManager)
+        public VoteController(IMediator mediator)
         {
             _mediator = mediator;
-            _userManager = userManager;
         }
 
         [HttpPost(ApiRoutes.VotersRegister.Vote)]
@@ -34,10 +28,12 @@ namespace WepApi.Controllers.V1
             {
                 CategoryId = request.CategoryId,
                 NomineeId = request.NomineeId,
-                UserId = _userManager.GetUserAsync(User).Result.Id
+                Username = request.Username
             });
 
-            return result != null ? (IActionResult)Accepted(result) : NotFound();
+            return result != null ? (IActionResult)Accepted(result) : BadRequest(
+                new { Error = "Category or Nominee specified does not exist or you have already voted for this category"}
+                );
         }
     }
 }

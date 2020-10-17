@@ -1,6 +1,7 @@
 ﻿using Contracts.Responses.V1;
 using DTOs.DTOs;
 using MediatR;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 using Repositories.Commands;
 using Repositories.Vote;
@@ -14,17 +15,21 @@ namespace Repositories.Handlers
     {
         private readonly ILogger<VoteHandler> _logger;
         private readonly IVoteRepository _voteRepo;
+        private readonly UserManager<IdentityUser> _userManager;
 
-        public VoteHandler(ILogger<VoteHandler> logger, IVoteRepository voteRepository)
+        public VoteHandler(ILogger<VoteHandler> logger, 
+                           IVoteRepository voteRepository,
+                           UserManager<IdentityUser> userManager)
         {
             _logger = logger;
             _voteRepo = voteRepository;
+            _userManager = userManager;
         }
         public async Task<VoteResponse> Handle(VoteCommand request, CancellationToken cancellationToken)
         {
             var result = await _voteRepo.PerformVoteAsync(new VoteDto
             {
-                UserId = request.UserId,
+                UserId = _userManager.FindByNameAsync(request.Username).Result.Id,
                 CategoryDtoId = request.CategoryId,
                 NomineeDtoId = request.NomineeId,
                 CreatedAt = DateTime.Now

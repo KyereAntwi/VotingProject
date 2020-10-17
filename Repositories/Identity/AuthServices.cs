@@ -61,7 +61,8 @@ namespace Repositories.Identity
 
             var newUser = new IdentityUser
             {
-                UserName = username
+                Id = existingUser.Id,
+                UserName = existingUser.UserName
             };
 
             var role = await _userManager.GetRolesAsync(existingUser);

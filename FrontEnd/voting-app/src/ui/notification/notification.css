@@ -1,0 +1,22 @@
+.notification {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.error {
+  background-color: crimson;
+  color: white;
+}
+
+.success {
+  background-color: green;
+  color: white;
+}
+
+.warning {
+  background-color: orange;
+  color: white;
+}

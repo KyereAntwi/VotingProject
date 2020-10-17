@@ -7,7 +7,7 @@ namespace WepApi.Helpers
     {
         public string RandomChar() 
         {
-            int length = 7;
+            int length = 8;
 
             StringBuilder str_build = new StringBuilder();
             Random random = new Random();

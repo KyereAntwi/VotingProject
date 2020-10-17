@@ -58,17 +58,18 @@ const App = (props) => {
           <Route
             path="/nominees/:categoryId"
             render={(props) =>
-              user ? <Nominations /> : <Redirect to="/login" />
+              user ? <Nominations {...props} /> : <Redirect to="/login" />
             }
           />
           <Route path="/login" render={(props) => <Login {...props} />} />
           <Route
-            path="/"
+            path="/start"
             render={(props) =>
               user ? <GettingStarted /> : <Redirect to="/login" />
             }
           />
-          <Route path="**" component={Login} />
+          <Route path="/" exact render={(props) => <Redirect to="/start" />} />
+          <Route path="**" render={(props) => <Redirect to="/start" />} />
         </Switch>
       </div>
     </div>

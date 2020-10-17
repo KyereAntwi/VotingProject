@@ -1,0 +1,19 @@
+.admin-main {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  flex-grow: 1fr;
+  background-color: #3c3d3c;
+  color: white;
+}
+
+.nav-page {
+  display: flex;
+  flex-direction: column;
+}

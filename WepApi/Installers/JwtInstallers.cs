@@ -3,8 +3,10 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using System.Collections.Generic;
 using System.Text;
+
 
 namespace WepApi.Installers
 {
@@ -43,24 +45,58 @@ namespace WepApi.Installers
             services.AddCors(
                 options => options
                 .AddPolicy("CorsPolicy",
-                builder => { builder.AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin(); }));
+                builder => { builder
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowAnyOrigin()
+                    .AllowAnyHeader(); }));
 
             //// services for swagger
-            //services.AddSwaggerGen(x =>
+            services.AddSwaggerGen(x =>
+            {
+                x.SwaggerDoc("v1", new OpenApiInfo { Title = "Application API", Version = "v1" });
+                var scheme = new OpenApiSecurityScheme
+                {
+                    Description = "JWT Authorization header using the bearer scheme",
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.ApiKey
+                };
+                var security = new OpenApiSecurityRequirement()
+                {
+                    {scheme, new string[0] { } }
+                };
+                x.AddSecurityDefinition("Bearer", scheme);
+                x.AddSecurityRequirement(security);
+            });
+
+            //services.AddSwaggerGen(options =>
             //{
-            //    x.SwaggerDoc("V1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Application APi", Version = "V1" });
-            //    var security = new Dictionary<string, IEnumerable<string>>
+            //    var apiinfo = new OpenApiInfo
             //    {
-            //        { "Bearer", new string[0] }
+            //        Title = "Application API",
+            //        Version = "v1",
+            //        Description = "JWT Authorization header using the bearer scheme",
             //    };
-            //    x.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme 
-            //    {
-            //        Description = "JWT Authorization",
-            //        Name = "Authorization",
-            //        In = Microsoft.OpenApi.Models.ParameterLocation.Header,
-            //        Type = Microsoft.OpenApi.Models.SecuritySchemeType.ApiKey
-            //    });
-            //    x.AddSecurityRequirement(security);
+
+            //        OpenApiSecurityScheme securityDefinition = new OpenApiSecurityScheme()
+            //        {
+            //            Name = "Bearer",
+            //            BearerFormat = "JWT",
+            //            Scheme = "bearer",
+            //            Description = "Specify the authorization token.",
+            //            In = ParameterLocation.Header,
+            //            Type = SecuritySchemeType.Http,
+            //        };
+
+            //        OpenApiSecurityRequirement securityRequirements = new OpenApiSecurityRequirement()
+            //        {
+            //            { securityDefinition, new string [] { } }
+            //        };
+
+            //        options.SwaggerDoc("v1", apiinfo);
+            //        options.AddSecurityDefinition("Bearer", securityDefinition);
+            //        options.AddSecurityRequirement(securityRequirements);               
             //});
         }
     }

@@ -7,30 +7,13 @@ const Login = (props) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const { setUser } = useContext(UserContext);
+  const { mutation } = useContext(UserContext);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch(
-      "https://localhost:5001/api/V1/Identity/Login",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          username: username,
-          password: password,
-        }),
-      }
-    ).catch((err) => {
-      console.log(err);
-    });
-
-    const data = await response.json();
-    setUser(data.user);
-    localStorage.setItem("token", data.token);
-    props.history.push("/");
+    const user = { username, password };
+    await mutation(user);
+    props.history.push("/start");
   };
 
   return (

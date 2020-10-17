@@ -16,14 +16,11 @@ namespace WepApi
         }
 
         public IConfiguration Configuration { get; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.InstallServicesAssemblies(Configuration);
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -39,7 +36,7 @@ namespace WepApi
             ////swagger options configurations
             //var swaggerOptions = new SwaggerOptions();
             //Configuration.GetSection(nameof(SwaggerOptions)).Bind(swaggerOptions);
-            //app.UseSwagger(options => 
+            //app.UseSwagger(options =>
             //{
             //    options.RouteTemplate = swaggerOptions.JsonRoute;
             //});
@@ -47,6 +44,13 @@ namespace WepApi
             //{
             //    options.SwaggerEndpoint(swaggerOptions.UIEndpoint, swaggerOptions.Description);
             //});
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "TestService");
+            });
 
             app.UseCors("CorsPolicy");
             app.UseHttpsRedirection();

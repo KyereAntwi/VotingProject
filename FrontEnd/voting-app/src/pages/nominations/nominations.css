@@ -1,0 +1,7 @@
+.nominations-list {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1fr;
+  justify-content: center;
+  align-content: center;
+}

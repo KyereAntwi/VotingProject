@@ -1,29 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useQuery } from "react-query";
 import Category from "../../components/category/category";
 
+import { UserContext } from "../../store/contexts/user-context";
+import { fetchCategories } from "../../helpers/querries";
+
 import "./categories.css";
 
-const fetchCategories = async (pollId) => {
-  const token = localStorage.getItem("token");
-  const response = await fetch(
-    `https://localhost:5001/api/V1/Poll/${pollId}/Category`,
-    {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    }
-  );
-  const data = await response.json();
-  return data;
-};
 const Categories = (props) => {
-  const { status, data, error } = useQuery("categories", () =>
-    fetchCategories(props.match.params.pollId)
+  const { user } = useContext(UserContext);
+
+  const { status, data } = useQuery("categories", () =>
+    fetchCategories(props.match.params.pollId, user.username)
   );
 
   if (status === "loading") return <p>Loading ...</p>;
-  if (status === "error") return console.log(error);
+  if (status === "error") {
+  }
+
+  if (data.length === 0) {
+  }
 
   return (
     <div className="categories-list">

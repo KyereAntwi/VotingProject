@@ -8,6 +8,6 @@ namespace Repositories.Commands
     {
         public Guid NomineeId { get; set; }
         public Guid CategoryId { get; set; }
-        public string UserId { get; set; }
+        public string Username { get; set; }
     }
 }

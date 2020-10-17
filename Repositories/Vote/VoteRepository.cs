@@ -29,7 +29,12 @@ namespace Repositories.Vote
             var category = await _db.CategoryDtos.FindAsync(vote.CategoryDtoId);
             var nominee = await _db.NomineeDtos.FindAsync(vote.NomineeDtoId);
 
-            if (category == null || nominee == null)
+            var existingVote = await _db.VoteDtos.FirstOrDefaultAsync(v => 
+                v.UserId == vote.UserId && 
+                v.NomineeDtoId == vote.NomineeDtoId && 
+                v.CategoryDtoId == vote.CategoryDtoId);
+
+            if (category == null || nominee == null || existingVote != null)
                 return null;
 
             await _db.VoteDtos.AddAsync(vote);

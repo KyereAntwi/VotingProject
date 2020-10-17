@@ -18,6 +18,7 @@
             // polls categories operations
             public const string CreateACategoryForPoll = Base1 + "/Poll/{PollId}/Category";
             public const string GetAllCategoriesOfPoll = Base1 + "/Poll/{PollId}/Category";
+            public const string GetAllCategoriesOfPollAvailable = Base1 + "/Poll/{PollId}/AvailableCategories/{Username}";
 
             public const string GetSingleCategoryOfPoll = Base1 + "/Category/{Id}";
             public const string RemoveACategoryOfPoll = Base1 + "/Category/{Id}";
@@ -49,6 +50,7 @@
             public const string Refresh = Base1 + "/Identity/Refresh";
             public const string PerformMasterRegistration = Base1 + "/Identity/Master/Register";
             public const string DeleteUser = Base1 + "/Identity/DeleteUser/{Username}";
+            public const string GetUser = Base1 + "/Identity/User/{Username}";
         }
     }
 }

@@ -201,7 +201,24 @@ namespace WepApi.Controllers.V1
             return Ok();
         }
 
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "EC-Official")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        [HttpGet(ApiRoutes.Auth.GetUser)]
+        public async Task<IActionResult> GetUserInfoAsync([FromRoute] string Username) 
+        {
+            var result = await _userManager.FindByNameAsync(Username);
+            var roles = await _userManager.GetRolesAsync(result);
+            var response = new AuthSuccessResponse
+            {
+                User = new ApplicationUserResponse
+                {
+                    Username = result.UserName,
+                    Role = roles[0]
+                }
+            };
+            return Ok(response);
+        }
+
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "EC-Official, Administrator")]
         [HttpGet(ApiRoutes.VotersRegister.GenerateVoterCode)]
         public async Task<IActionResult> GenerateUsernameAsync() 
         {

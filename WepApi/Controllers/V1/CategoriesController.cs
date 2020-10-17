@@ -26,23 +26,25 @@ namespace WepApi.Controllers.V1
         }
 
         [HttpGet(ApiRoutes.Categories.GetAllCategoriesOfPoll)]
-        public async Task<IActionResult> GetAllCategoriesOfAPollAsync([FromRoute] Guid PollId) 
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
+        public async Task<IActionResult> GetAllCategoriesOfAPollAsync([FromRoute] Guid PollId)
         {
             var querry = new GetAllCategoriesOfPollQuery(PollId);
             var result = await _mediator.Send(querry);
             return Ok(result);
         }
 
-        public async Task<IActionResult> GetAllCategoriesOfAPollAvailableAsync([FromQuery] Guid PollId) 
+        [HttpGet(ApiRoutes.Categories.GetAllCategoriesOfPollAvailable)]
+        public async Task<IActionResult> GetAllCategoriesOfAPollAvailableAsync([FromRoute] Guid PollId, [FromRoute] string Username)
         {
-            var user = await _userManager.GetUserAsync(User);
+            var user = await _userManager.FindByNameAsync(Username);
             var querry = new GetAllCategoriesOfPollAvailableQuery(PollId, user);
             var result = await _mediator.Send(querry);
             return Ok(result);
         }
 
         [HttpGet(ApiRoutes.Categories.GetSingleCategoryOfPoll)]
-        public async Task<IActionResult> GetCategoryByIdAsync([FromRoute] Guid Id) 
+        public async Task<IActionResult> GetCategoryByIdAsync([FromRoute] Guid Id)
         {
             var querry = new GetCategoryByIdQuery(Id);
             var result = await _mediator.Send(querry);
@@ -51,7 +53,7 @@ namespace WepApi.Controllers.V1
 
         [HttpPost(ApiRoutes.Categories.CreateACategoryForPoll)]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
-        public async Task<IActionResult> CreateCategoryAsync([FromRoute] Guid PollId, [FromBody] CreateCategoryRequest request) 
+        public async Task<IActionResult> CreateCategoryAsync([FromRoute] Guid PollId, [FromBody] CreateCategoryRequest request)
         {
             var result = await _mediator.Send(new CreateCategoryCommand
             {
@@ -63,7 +65,7 @@ namespace WepApi.Controllers.V1
 
         [HttpDelete(ApiRoutes.Categories.RemoveACategoryOfPoll)]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
-        public async Task<IActionResult> DeleteCategoryAsync([FromRoute] Guid Id) 
+        public async Task<IActionResult> DeleteCategoryAsync([FromRoute] Guid Id)
         {
             var result = await _mediator.Send(new RemoveCategoryCommand
             {
@@ -74,7 +76,7 @@ namespace WepApi.Controllers.V1
 
         [HttpPost(ApiRoutes.Categories.AddNomineeToCategory)]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
-        public async Task<IActionResult> AddNomineeToCategoryAsync([FromRoute] Guid CategoryId, [FromRoute] Guid NomineeId) 
+        public async Task<IActionResult> AddNomineeToCategoryAsync([FromRoute] Guid CategoryId, [FromRoute] Guid NomineeId)
         {
             var result = await _mediator.Send(new AddNomineeToCategoryCommand
             {
@@ -86,7 +88,7 @@ namespace WepApi.Controllers.V1
 
         [HttpDelete(ApiRoutes.Categories.RemoveNomineeFromCategory)]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
-        public async Task<IActionResult> RemoveNomineeFromCategoryAsync([FromRoute] Guid CategoryId, [FromRoute] Guid NomineeId) 
+        public async Task<IActionResult> RemoveNomineeFromCategoryAsync([FromRoute] Guid CategoryId, [FromRoute] Guid NomineeId)
         {
             var result = await _mediator.Send(new RemoveNomineeFromCategoryCommand
             {
