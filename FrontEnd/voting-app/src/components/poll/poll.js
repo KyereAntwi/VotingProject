@@ -1,15 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Card } from "react-bootstrap";
 
 import "./poll.css";
 
-const Poll = ({ poll }) => {
+const Poll = ({ props }) => {
+  const handleClick = () => {
+    props.history.push(`category/${props.poll.id}`)
+  };
+
   return (
-    <div className="card">
-      <h3 className="theme">{poll.theme}</h3>
-      <p className="description">{poll.description}</p>
-      {poll.id ? <Link to={`/categories/${poll.id}`}>Select Poll</Link> : null}
-    </div>
+    <Card onClick={handleClick} style={{ width: '18rem' }}>
+      <Card.Body>
+        <Card.Title>{props.poll.theme}</Card.Title>
+        <Card.Text>{props.poll.description}</Card.Text>
+      </Card.Body>
+    </Card>
   );
 };
 

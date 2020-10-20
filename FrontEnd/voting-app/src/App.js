@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 
-import Navbar from "./ui/navbar/navbar";
 import GettingStarted from "./pages/getting-started/getting-started";
 import Login from "./pages/login/login";
 import Categories from "./pages/categories/categories";
@@ -16,9 +15,7 @@ const App = (props) => {
 
   return (
     <div className="App">
-      <Navbar {...props} />
-      <div className="main">
-        <Switch>
+      <Switch>
           <Route
             path="/eco"
             exact
@@ -71,7 +68,6 @@ const App = (props) => {
           <Route path="/" exact render={(props) => <Redirect to="/start" />} />
           <Route path="**" render={(props) => <Redirect to="/start" />} />
         </Switch>
-      </div>
     </div>
   );
 };

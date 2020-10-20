@@ -1,13 +1,17 @@
 import React from "react";
+import { Card } from "react-bootstrap";
 import "./category.css";
 
 const Category = ({ category, history }) => {
   return (
     <div
-      onClick={() => history.push(`/nominees/${category.id}`)}
-      className="category"
+      className="col"
     >
-      <p>{category.theme}</p>
+      <Card onClick={() => history.push(`/nominees/${category.id}`)}>
+        <Card.Body>
+          <Card.Title>{category.theme}</Card.Title>
+        </Card.Body>
+      </Card>
     </div>
   );
 };

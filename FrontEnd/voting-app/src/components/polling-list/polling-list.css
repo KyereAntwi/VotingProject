@@ -1,7 +1,0 @@
-.polling-list {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  flex-wrap: wrap;
-  align-content: center;
-}
