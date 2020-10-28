@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Repositories.Nominees
@@ -41,6 +42,12 @@ namespace Repositories.Nominees
         public async Task<NomineeDto> GetASingleNomineeAsync(Guid Id)
         {
             return await _dbContext.NomineeDtos.Include(n => n.CategoryNomineeDtos).SingleOrDefaultAsync(n => n.Id == Id);
+        }
+
+        public async Task<int> GetTotalVotesForNomineePerCategoryAsync(Guid NomineeId, Guid CategoryId)
+        {
+            var votes = await _dbContext.VoteDtos.Where(v => v.NomineeDtoId == NomineeId && v.CategoryDtoId == CategoryId).ToListAsync();
+            return votes.Count;
         }
     }
 }

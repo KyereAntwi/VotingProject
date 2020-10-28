@@ -1,4 +1,11 @@
-﻿@{
-}
+﻿@model PollDto
 
-<h1>The Index page works!</h1>
+<div class="container">
+    @if (Model.CategoryDtos.Count > 0)
+    {
+        foreach (var cat in Model.CategoryDtos) 
+        {
+            @await Component.InvokeAsync("CategoryResults", new { CategoryId = cat.Id })
+        }
+    }
+</div>

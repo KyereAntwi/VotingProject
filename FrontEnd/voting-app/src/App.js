@@ -9,6 +9,7 @@ import Administrator from "./pages/administrator/administrator";
 import ECO from "./pages/electoral-commission-officer/eco";
 
 import { UserContext } from "./store/contexts/user-context";
+import AdminCategories from "./components/admin-categories/admin-categories";
 
 const App = (props) => {
   const { user } = useContext(UserContext);
@@ -17,11 +18,26 @@ const App = (props) => {
     <div className="App">
       <Switch>
           <Route
+                path="/polls/:pollId"
+                exact
+                render={(props) =>
+                  user ? (
+                    user.role === "Administrator" ? (
+                      <AdminCategories {...props}/>
+                    ) : (
+                      <Redirect to="/login" />
+                    )
+                  ) : (
+                    <Redirect to="/login" />
+                  )
+                }
+          />
+          <Route
             path="/eco"
             exact
             render={(props) =>
               user ? (
-                user.role === "EC-Official" ? (
+                user.role === "Ecoffical" || "Administrator" ? (
                   <ECO />
                 ) : (
                   <Redirect to="/login" />
@@ -62,10 +78,10 @@ const App = (props) => {
           <Route
             path="/start"
             render={(props) =>
-              user ? <GettingStarted /> : <Redirect to="/login" />
+              user.username ? <GettingStarted {...props}/> : <Redirect to="/login" />
             }
           />
-          <Route path="/" exact render={(props) => <Redirect to="/start" />} />
+          <Route path="/" exact render={(props) => <Redirect to="/login" />} />
           <Route path="**" render={(props) => <Redirect to="/start" />} />
         </Switch>
     </div>

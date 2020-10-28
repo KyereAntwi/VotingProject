@@ -232,8 +232,9 @@ namespace Repositories.Identity
                 };
             }
 
-            var createdIdentityUser = await _userManager.FindByNameAsync(username);
-            var roleAddingResult = await _userManager.AddToRoleAsync(createdIdentityUser, role);
+            var user = await _userManager.FindByNameAsync(username);
+            if(user != null)
+                _ = await _userManager.AddToRoleAsync(user, role);
 
             return new AuthenticationResult
             {

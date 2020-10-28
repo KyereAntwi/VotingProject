@@ -1,22 +1,21 @@
 import React from "react";
-import { Route } from "react-router-dom";
-import AdminHome from "../admin-home/admin-home";
 import AdminPolls from "./admin-polls/admin-polls";
-import AdminNavbar from "../../ui/admin-navbar/admin-navbar";
-
-import "./administrator.css";
+import AdminNominees from "../admin-nominees/admin-nominees";
+import AdminSystemWorkers from "../../components/admin-workers/admin-workers";
 
 const Administrator = (props) => {
   return (
     <div className="container">
-      <div className="admin-main">
-        <div className="side-nav">
-          <AdminNavbar />
+      <div className="row mt-4">
+        <div className="col-2"></div>
+        <div className="col-8">
+          <AdminPolls />
+          <hr />
+          <AdminNominees />
+          <hr />
+          <AdminSystemWorkers />
         </div>
-        <div className="nav-page">
-          <Route path="/administrator" component={AdminHome} />
-          <Route path="/administrator/polls" component={AdminPolls} />
-        </div>
+        <div className="col-2"></div>
       </div>
     </div>
   );

@@ -1,16 +1,19 @@
 import React from "react";
-import { useQuery } from "react-query";
+import { Card } from "react-bootstrap";
 
 import "./nominee.css";
 
-const fetchNomineeData = async (nomId) => {};
+const Nominee = (props) => {
 
-const Nominee = ({ nomineeId }) => {
-  const { status } = useQuery(() => fetchNomineeData(nomineeId));
-
-  if (status === "loading") return <div>Loading ...</div>;
-
-  return <div className="nominee">Nominee works ...</div>;
+return (
+<div className="col">
+    <Card onClick={() => props.vote(props.nominee)} style={{width: '16rem', height: '26rem', cursor: 'pointer'}}>
+        <Card.Img variant="top" src={"https://localhost:5001" + props.nominee.imageUrl}/>
+        <Card.Body>
+            <Card.Subtitle>{props.nominee.fullname}</Card.Subtitle>
+        </Card.Body>
+    </Card>
+</div>);
 };
 
 export default Nominee;

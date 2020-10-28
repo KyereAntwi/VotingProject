@@ -39,9 +39,7 @@ namespace Repositories.Handlers
                         {
                             categoryNominees.Add(new NomineeResponse
                             {
-                                Id = nominee.NomineeDtoId,
-                                Fullname = nominee.NomineeDto.Fullname,
-                                ImageUrl = nominee.NomineeDto.ImageUrl
+                                Id = nominee.NomineeDtoId
                             });
                         }
 

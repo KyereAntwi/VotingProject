@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route } from "react-router-dom";
+import {ToastContainer} from 'react-toastify';
 
 import UserContextProvider from "./store/contexts/user-context";
 
@@ -15,6 +16,7 @@ ReactDOM.render(
     <BrowserRouter>
       <UserContextProvider>
         <Route component={App} />
+        <ToastContainer />
       </UserContextProvider>
     </BrowserRouter>
   </React.StrictMode>,

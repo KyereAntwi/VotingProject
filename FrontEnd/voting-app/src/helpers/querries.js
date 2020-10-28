@@ -25,6 +25,18 @@ export const fetchCategories = async (pollId, username) => {
   return data;
 };
 
+export const fetchAllCategoriesOfPoll = async (pollId) => {
+  const token = localStorage.getItem("token");
+  const response = await fetch(`${BASE_URL}/Poll/${pollId}/Category`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+
+  const data = await response.json();
+  return data;
+}
+
 export const fetchNominations = async (categoryId) => {
   const token = localStorage.getItem("token");
   const response = await fetch(`${BASE_URL}/Category/${categoryId}`, {
@@ -34,8 +46,45 @@ export const fetchNominations = async (categoryId) => {
   });
 
   const data = await response.json();
-  return data;
+  // console.log(data.nominees);
+  return data.nominees;
 };
+
+export const fetchAllExistingNominees = async () => {
+  const token = localStorage.getItem("token");
+  const response = await fetch(`${BASE_URL}/nominee`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+
+  const data = await response.json();
+  return data;
+}
+
+export const generateVoterCode = async () => {
+  const token = localStorage.getItem("token");
+  const response = await fetch(`${BASE_URL}/voter/code`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  const data = await response.json();
+  return data;
+}
+
+export const getAllSystemWorkers = async () => {
+  const token = localStorage.getItem("token");
+  const response = await fetch(`${BASE_URL}/Identity/Users`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+
+  const data = await response.json();
+  console.log(data);
+  return data;
+}
 
 export const fetchUserInfo = async () => {
   const token = localStorage.getItem("token");

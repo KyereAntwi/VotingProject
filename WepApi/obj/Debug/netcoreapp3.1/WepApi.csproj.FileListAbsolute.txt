@@ -92,3 +92,5 @@ E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\WepApi.V
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\Razor\Views\Result\Index.cshtml.g.cs
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\scopedcss\bundle\WepApi.styles.css
+E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\CategoryResults\Default.cshtml.g.cs

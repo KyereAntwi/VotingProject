@@ -41,7 +41,7 @@ namespace Repositories.Handlers
                 {
                     await request.Avatar.CopyToAsync(fileStream);
                 }
-                nominee.ImageUrl = filePath;
+                nominee.ImageUrl = $"/{RandomName()}";
             }
 
             var result = await _repository.CreateANomineeAsync(nominee);

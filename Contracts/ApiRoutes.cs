@@ -26,6 +26,7 @@
             // polls category nominees operations
             public const string AddNomineeToCategory = Base1 + "/Category/{CategoryId}/Nominee/{NomineeId}";
             public const string RemoveNomineeFromCategory = Base1 + "/Category/{CategoryId}/Nominee/{NomineeId}";
+            public const string GetAllNomineesOfACategory = Base1 + "/Category/{CategoryId}/Nominees";
         }
 
         public static class Nominees 
@@ -51,6 +52,7 @@
             public const string PerformMasterRegistration = Base1 + "/Identity/Master/Register";
             public const string DeleteUser = Base1 + "/Identity/DeleteUser/{Username}";
             public const string GetUser = Base1 + "/Identity/User/{Username}";
+            public const string GetAllManagers = Base1 + "/Identity/Users";
         }
     }
 }

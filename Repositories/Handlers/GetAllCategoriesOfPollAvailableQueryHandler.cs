@@ -1,6 +1,7 @@
 ﻿using Contracts.Responses.V1;
 using MediatR;
 using Repositories.Categories;
+using Repositories.Nominees;
 using Repositories.Querries;
 using Repositories.Vote;
 using System.Collections.Generic;
@@ -13,11 +14,16 @@ namespace Repositories.Handlers
     {
         private readonly ICategoryRepository _catRepo;
         private readonly IVoteRepository _voteRepo;
+        private readonly INomineeRepository _nomineeRepository;
 
-        public GetAllCategoriesOfPollAvailableQueryHandler(ICategoryRepository categoryRepository, IVoteRepository voteRepository)
+        public GetAllCategoriesOfPollAvailableQueryHandler(ICategoryRepository categoryRepository, 
+                                                           IVoteRepository voteRepository,
+                                                           INomineeRepository nomineeRepo)
         {
             _catRepo = categoryRepository;
             _voteRepo = voteRepository;
+            _nomineeRepository = nomineeRepo;
+
         }
         public async Task<List<CategoryResponse>> Handle(GetAllCategoriesOfPollAvailableQuery request, CancellationToken cancellationToken)
         {
@@ -54,11 +60,12 @@ namespace Repositories.Handlers
                             List<NomineeResponse> categoryNominees = new List<NomineeResponse>();
                             foreach (var nominee in cat.CategoryNomineeDtos)
                             {
+                                var nomineeFound = await _nomineeRepository.GetASingleNomineeAsync(nominee.NomineeDtoId);
                                 categoryNominees.Add(new NomineeResponse
                                 {
                                     Id = nominee.NomineeDtoId,
-                                    Fullname = nominee.NomineeDto.Fullname,
-                                    ImageUrl = nominee.NomineeDto.ImageUrl
+                                    Fullname = nomineeFound.Fullname,
+                                    ImageUrl = nomineeFound.ImageUrl != null ? nomineeFound.ImageUrl : ""
                                 });
                             }
 

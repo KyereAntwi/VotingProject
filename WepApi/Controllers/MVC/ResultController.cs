@@ -1,23 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Repositories.Polls;
 
 namespace WepApi.Controllers.MVC
 {
     public class ResultController : Controller
     {
-        public ResultController()
-        {
+        private readonly IPollsRepository _pollRepo;
 
+        public ResultController(IPollsRepository pollsRepository)
+        {
+            _pollRepo = pollsRepository;
         }
 
-        [HttpGet("/Result")]
-        public IActionResult Index()
+        [HttpGet("/Result/{PollId}")]
+        public async Task<IActionResult> Index(Guid PollId)
         {
-            ViewData["Title"] = "Polls List";
-            return View();
+            if (PollId == Guid.Empty)
+                return View();
+
+            var poll = await _pollRepo.GetSinglePollResponseAsync(PollId);
+
+            ViewData["Title"] = $"{poll.Theme}";
+            return View(poll);
         }
     }
 }

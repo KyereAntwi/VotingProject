@@ -1,0 +1,39 @@
+﻿@model CategoryResultViewModel
+
+@if (Model.Votes.Count > 0)
+{
+    <section class="ftco-section ftco-project" id="projects-section">
+        <div class="container-fluid px-md-0">
+            <div class="row no-gutters justify-content-center pb-5">
+                <div class="col-md-12 heading-section text-center ftco-animate">
+                    <h3>Results for the @Model.Catogory.Theme</h3>
+                </div>
+                    @foreach (var item in Model.Votes)
+                    {
+                        <div class="col-md-4 d-flex ftco-animate">
+                            <div class="blog-entry justify-content-end">
+                                <a href="#l" class="block-20" style="background-image: url('https://localhost:5001/@item.Nominee.ImageUrl');">
+                                </a>
+                                <div class="text mt-3 float-right d-block">
+                                    <h3 class="heading"><a href="single.html">@item.Nominee.Fullname</a></h3>
+                                    <div class="d-flex align-items-center mb-3 meta">
+                                        <div class="progress mx-auto" data-value='@item.TotalVote'>
+                                            <span class="progress-left">
+                                                <span class="progress-bar border-primary"></span>
+                                            </span>
+                                            <span class="progress-right">
+                                                <span class="progress-bar border-primary"></span>
+                                            </span>
+                                            <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                                                <div class="h2 font-weight-bold">@item.TotalVote</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+            </div>
+        </div>
+    </section>
+}

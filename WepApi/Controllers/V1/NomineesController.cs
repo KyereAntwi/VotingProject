@@ -40,7 +40,7 @@ namespace WepApi.Controllers.V1
 
         [HttpPost(ApiRoutes.Nominees.AddNewNominee)]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
-        public async Task<IActionResult> CreateANomineeAsync([FromForm] CreateNomineeRequest request) 
+        public async Task<IActionResult> CreateANomineeAsync([FromForm]CreateNomineeRequest request) 
         {
             var result = await _mediator.Send(new CreateANomineeCommand 
             {

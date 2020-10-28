@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import {Alert} from 'react-bootstrap';
+import {Alert, NavLink} from 'react-bootstrap';
 import { useQuery } from "react-query";
 import Category from "../../components/category/category";
 
@@ -16,43 +16,40 @@ const Categories = (props) => {
     fetchCategories(props.match.params.pollId, user.username)
   );
 
-  if (status === "loading") return <SpinnerLoader />;
-  if (status === "error") {
-    return (
-    <div className="col-md-12">
-      <Alert variant="warning">
-        There was an error loading Category list: {error}
-      </Alert>
+  if (status === "loading") return (
+    <div className="container">
+      <div className="row justify-content-center align-items-center text-center">
+        <div className="col-12">
+          <SpinnerLoader />
+        </div>
+      </div>
     </div>
     );
-  }
 
-  if (data.length === 0) {
-    return(
-      <div className="col-md-12">
-        <Alert variant="info">
-          There are no Categories to display
-        </Alert>
+  if (status === "error") return (
+      <div className="container justify-content-center align-items-center">
+        <div className="row">
+          <div className="col-md-12">
+            <p className="alert">There was a problem trying to load the categories: {error}</p>
+          </div>
+        </div>
       </div>
-    )
-  }
+    );
 
   return (
     <div className="container">
-      <div className="row">
+      <div className="row text-center mt-5">
         <div className="col-md-12">
-          <h1>Select a category below to procedd</h1>
+          <h4 className="text-light">Select a category below to proceed</h4>
         </div>
       </div>
 
       <div className="row">
       {data.length > 0 ? (
-        data.map((cat) => <Category key={cat.id} category={cat} {...props} />)
+        data.map((cat) => <Category key={cat.id} pollId={props.match.params.pollId} category={cat} {...props} />)
       ) : (
-        <div className="col-md-12">
-          <Alert variant="info">
-            There are no categories to display!
-          </Alert>
+        <div className="col-md-12 justify-content-center align-items-center text-center">
+          <a href="/login" className="btn btn-sm btn-info">There are no more categories to vote for, Click button to End!</a>
         </div>
       )}
       </div>

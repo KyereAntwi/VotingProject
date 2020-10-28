@@ -50,7 +50,7 @@ namespace Repositories.Categories
         public async Task<CategoryDto> GetCategoryByIdAsync(Guid Id)
         {
             var category = await _dbContext.CategoryDtos
-                .Include(c => c.CategoryNomineeDtos)
+                .Include(c => c.CategoryNomineeDtos).ThenInclude(n => n.NomineeDto)
                 .Include(c => c.VoteDtos)
                 .SingleOrDefaultAsync(c => c.Id == Id);
 

@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Contracts;
 using Contracts.Responses.V1;
@@ -8,6 +9,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Repositories.Identity;
 using WepApi.Helpers;
 
@@ -25,7 +27,7 @@ namespace WepApi.Controllers.V1
             _userManager = userManager;
         }
 
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator, EC-Official")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator, Ecoffical")]
         [HttpPost(ApiRoutes.Auth.Register)]
         public async Task<IActionResult> RegisterAsync([FromBody]UserRegistrationRequest request) 
         {
@@ -64,7 +66,7 @@ namespace WepApi.Controllers.V1
             return Ok(new AuthSuccessResponse { Token = result.Token, RefreshToken = result.RefreshToken });
         }
 
-        [HttpPost(ApiRoutes.Auth.PerformMasterRegistration)]
+        [HttpGet(ApiRoutes.Auth.PerformMasterRegistration)]
         public async Task<IActionResult> MasterRegistrationAsync()
         {
             UserRegistrationRequest request = new UserRegistrationRequest 
@@ -218,7 +220,7 @@ namespace WepApi.Controllers.V1
             return Ok(response);
         }
 
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "EC-Official, Administrator")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Ecoffical, Administrator")]
         [HttpGet(ApiRoutes.VotersRegister.GenerateVoterCode)]
         public async Task<IActionResult> GenerateUsernameAsync() 
         {
@@ -234,6 +236,42 @@ namespace WepApi.Controllers.V1
             }
 
             return Ok(new { Username = newUsername });
+        }
+
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
+        [HttpGet(ApiRoutes.Auth.GetAllManagers)]
+        public async Task<IActionResult> GetAllSystemManagers() 
+        {
+            List<ApplicationUserResponse> response = new List<ApplicationUserResponse>();
+
+            var adminUsers = await _userManager.GetUsersInRoleAsync("Administrator");
+            var ecUsers = await _userManager.GetUsersInRoleAsync("Ecoffical");
+
+            if (adminUsers.Count > 0) 
+            {
+                foreach (var user in adminUsers) 
+                {
+                    response.Add(new ApplicationUserResponse
+                    {
+                        Username = user.UserName,
+                        Role = "Administrator"
+                    });
+                }
+            }
+
+            if (ecUsers.Count > 0)
+            {
+                foreach (var user in ecUsers)
+                {
+                    response.Add(new ApplicationUserResponse
+                    {
+                        Username = user.UserName,
+                        Role = "Ecoffical"
+                    });
+                }
+            }
+
+            return Ok(response);
         }
     }
 }

@@ -32,9 +32,9 @@ namespace WepApi
                     await roleManager.CreateAsync(adminRole);
                 }
 
-                if (!await roleManager.RoleExistsAsync("EC-Official"))
+                if (!await roleManager.RoleExistsAsync("Ecoffical"))
                 {
-                    var adminRole = new IdentityRole("EC-Official");
+                    var adminRole = new IdentityRole("Ecofficial");
                     await roleManager.CreateAsync(adminRole);
                 }
 

@@ -11,5 +11,6 @@ namespace Repositories.Nominees
         Task<NomineeDto> GetASingleNomineeAsync(Guid Id);
         Task<NomineeDto> CreateANomineeAsync(NomineeDto nomineeDto);
         Task<NomineeDto> DeleteANomineeAsync(Guid Id);
+        Task<int> GetTotalVotesForNomineePerCategoryAsync(Guid NomineeId, Guid CategoryId);
     }
 }

@@ -9,11 +9,15 @@ const Login = (props) => {
 
   const { mutation } = useContext(UserContext);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    const user = { username, password };
-    await mutation(user);
-    props.history.push("/start");
+    const user = { 
+      username: username, 
+      password: password.length > 0 ? password : null };
+    mutation(user).then(res => {
+      props.history.push("/start");
+    });
+    
   };
 
   return (

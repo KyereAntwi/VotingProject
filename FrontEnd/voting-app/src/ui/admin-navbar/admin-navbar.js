@@ -1,18 +1,21 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const AdminNavbar = () => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <NavLink to="/administrator">Admin Home</NavLink>
-        </li>
-        <li>
-          <NavLink to="/administrator/polls">All Polls</NavLink>
-        </li>
-      </ul>
-    </nav>
+    <table className="table table-hover">
+      <tbody>
+        <tr>
+          <td><Link to="/administrator">Polls List</Link></td>
+        </tr>
+        <tr>
+          <td><Link to="/administrator/nominees">Nominee List</Link></td>
+        </tr>
+        <tr>
+          <td><Link to="/administrator/categories">Category List</Link></td>
+        </tr>
+      </tbody>
+    </table>
   );
 };
 
