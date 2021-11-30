@@ -36,15 +36,7 @@ const App = (props) => {
             path="/eco"
             exact
             render={(props) =>
-              user ? (
-                user.role === "Ecoffical" || "Administrator" ? (
-                  <ECO />
-                ) : (
-                  <Redirect to="/login" />
-                )
-              ) : (
-                <Redirect to="/login" />
-              )
+              <ECO />
             }
           />
           <Route

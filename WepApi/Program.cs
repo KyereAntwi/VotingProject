@@ -17,7 +17,8 @@ namespace WepApi
     {
         public static async Task Main(string[] args)
         {
-            var host = CreateHostBuilder(args).Build();
+            var host = CreateHostBuilder(args)
+                .Build();
 
             using (var serviceScope = host.Services.CreateScope()) 
             {

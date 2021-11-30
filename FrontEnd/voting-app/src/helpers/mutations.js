@@ -13,9 +13,9 @@ export const logIn = async (user) => {
   });
 
   const data = await response.json();
-  localStorage.setItem("token", data.token);
-  localStorage.setItem("username", data.user.username);
-  return data.user;
+  // localStorage.setItem("token", data.token);
+  // localStorage.setItem("username", data.user.username);
+  return data;
 };
 
 export const createPoll = async (poll) => {

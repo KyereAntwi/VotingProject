@@ -82,7 +82,6 @@ export const getAllSystemWorkers = async () => {
   });
 
   const data = await response.json();
-  console.log(data);
   return data;
 }
 

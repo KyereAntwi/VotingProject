@@ -81,7 +81,7 @@ const AdminNominees = () => {
                       </tr>
                   ) : (
                     <tr>
-                      <td className="table-warning">There are no nominees to diaplay</td>
+                      <td className="table-warning">There are no nominees to display</td>
                     </tr>
                   )}
                 </tbody>

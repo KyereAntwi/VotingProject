@@ -90,7 +90,7 @@ const AdminPolls = (props) => {
                         </tr>
                     ) : (
                       <tr>
-                        <td className="table-warning">There are no polls to diaplay</td>
+                        <td className="table-warning">There are no polls to display</td>
                       </tr>
                     )}
                   </tbody>

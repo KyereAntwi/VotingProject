@@ -1,0 +1,17 @@
+E:\BackUps\Projects\DevWeb\VotingProject\Repositories\bin\Release\netcoreapp3.1\Repositories.deps.json
+E:\BackUps\Projects\DevWeb\VotingProject\Repositories\bin\Release\netcoreapp3.1\Repositories.runtimeconfig.json
+E:\BackUps\Projects\DevWeb\VotingProject\Repositories\bin\Release\netcoreapp3.1\Repositories.runtimeconfig.dev.json
+E:\BackUps\Projects\DevWeb\VotingProject\Repositories\bin\Release\netcoreapp3.1\Repositories.dll
+E:\BackUps\Projects\DevWeb\VotingProject\Repositories\bin\Release\netcoreapp3.1\Repositories.pdb
+E:\BackUps\Projects\DevWeb\VotingProject\Repositories\bin\Release\netcoreapp3.1\Contracts.dll
+E:\BackUps\Projects\DevWeb\VotingProject\Repositories\bin\Release\netcoreapp3.1\DTOs.dll
+E:\BackUps\Projects\DevWeb\VotingProject\Repositories\bin\Release\netcoreapp3.1\Contracts.pdb
+E:\BackUps\Projects\DevWeb\VotingProject\Repositories\bin\Release\netcoreapp3.1\DTOs.pdb
+E:\BackUps\Projects\DevWeb\VotingProject\Repositories\obj\Release\netcoreapp3.1\Repositories.csprojAssemblyReference.cache
+E:\BackUps\Projects\DevWeb\VotingProject\Repositories\obj\Release\netcoreapp3.1\Repositories.AssemblyInfoInputs.cache
+E:\BackUps\Projects\DevWeb\VotingProject\Repositories\obj\Release\netcoreapp3.1\Repositories.AssemblyInfo.cs
+E:\BackUps\Projects\DevWeb\VotingProject\Repositories\obj\Release\netcoreapp3.1\Repositories.csproj.CoreCompileInputs.cache
+E:\BackUps\Projects\DevWeb\VotingProject\Repositories\obj\Release\netcoreapp3.1\Repositories.csproj.CopyComplete
+E:\BackUps\Projects\DevWeb\VotingProject\Repositories\obj\Release\netcoreapp3.1\Repositories.dll
+E:\BackUps\Projects\DevWeb\VotingProject\Repositories\obj\Release\netcoreapp3.1\Repositories.pdb
+E:\BackUps\Projects\DevWeb\VotingProject\Repositories\obj\Release\netcoreapp3.1\Repositories.genruntimeconfig.cache

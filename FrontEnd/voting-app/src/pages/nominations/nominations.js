@@ -9,7 +9,6 @@ import { fetchNominations } from "../../helpers/querries";
 import "./nominations.css";
 
 const Nominations = (props) => {
-  const [yesVote, setYesVote] = useState();
   const [showModal, setShowModal] = useState(false);
   const [setNominee, setSetNominee] = useState();
 
@@ -68,7 +67,7 @@ const Nominations = (props) => {
         <Modal.Body>
           <div className="row">
             <div className="col-12 align-content-center text-center">
-              <Image className="mt-2" src={`https://localhost:5001/${setNominee.imageUrl}`} width="200" height="200" roundedCircle />
+              <Image className="mt-2" src={`https://localhost:5001${setNominee.imageUrl}`} width="200" height="200" roundedCircle />
               <Button className="mt-2" variant="success" onClick={continueToVote}>
                 Yes continue to vote for {setNominee.fullname}
               </Button>

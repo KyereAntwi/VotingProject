@@ -1,0 +1,9 @@
+E:\BackUps\Projects\DevWeb\VotingProject\Contracts\bin\Release\netcoreapp3.1\Contracts.deps.json
+E:\BackUps\Projects\DevWeb\VotingProject\Contracts\bin\Release\netcoreapp3.1\Contracts.dll
+E:\BackUps\Projects\DevWeb\VotingProject\Contracts\bin\Release\netcoreapp3.1\Contracts.pdb
+E:\BackUps\Projects\DevWeb\VotingProject\Contracts\obj\Release\netcoreapp3.1\Contracts.csprojAssemblyReference.cache
+E:\BackUps\Projects\DevWeb\VotingProject\Contracts\obj\Release\netcoreapp3.1\Contracts.AssemblyInfoInputs.cache
+E:\BackUps\Projects\DevWeb\VotingProject\Contracts\obj\Release\netcoreapp3.1\Contracts.AssemblyInfo.cs
+E:\BackUps\Projects\DevWeb\VotingProject\Contracts\obj\Release\netcoreapp3.1\Contracts.csproj.CoreCompileInputs.cache
+E:\BackUps\Projects\DevWeb\VotingProject\Contracts\obj\Release\netcoreapp3.1\Contracts.dll
+E:\BackUps\Projects\DevWeb\VotingProject\Contracts\obj\Release\netcoreapp3.1\Contracts.pdb

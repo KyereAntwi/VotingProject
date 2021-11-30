@@ -82,7 +82,7 @@ const AdminCategories = (props) => {
                                     <td>{cat.theme}</td>
                                 </tr>
                             ) : 
-                                <tr className="table-warning"><td>Empty categories list</td></tr>
+                                <tr className="table-warning"><td>Empty category list</td></tr>
                             }
                         </tbody>
                     </table>

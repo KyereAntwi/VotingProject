@@ -49,13 +49,11 @@ E:\BackUps\Projects\DevWeb\VotingProject\WepApi\bin\Debug\netcoreapp3.1\Reposito
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\bin\Debug\netcoreapp3.1\Contracts.pdb
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\bin\Debug\netcoreapp3.1\DTOs.pdb
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\bin\Debug\netcoreapp3.1\Repositories.pdb
-E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\WepApi.csprojAssemblyReference.cache
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\WepApi.AssemblyInfoInputs.cache
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\WepApi.AssemblyInfo.cs
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\WepApi.RazorTargetAssemblyInfo.cache
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\WepApi.csproj.CopyComplete
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\staticwebassets\WepApi.StaticWebAssets.Manifest.cache
-E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\staticwebassets\WepApi.StaticWebAssets.xml
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\WepApi.dll
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\WepApi.pdb
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\WepApi.genruntimeconfig.cache
@@ -94,3 +92,5 @@ E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\Razor\Vi
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\scopedcss\bundle\WepApi.styles.css
 E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\CategoryResults\Default.cshtml.g.cs
+E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\WepApi.csproj.AssemblyReference.cache
+E:\BackUps\Projects\DevWeb\VotingProject\WepApi\obj\Debug\netcoreapp3.1\WepApi.GeneratedMSBuildEditorConfig.editorconfig

@@ -1,21 +1,21 @@
 import React, { createContext, useState } from "react";
 import { logIn } from "../../helpers/mutations";
-import { toast } from "react-toastify";
 
 export const UserContext = createContext();
 
 const UserContextProvider = (props) => {
   const [user, setUser] = useState({});
+  const [errorMessage, setErrorMessage] = useState();
 
   const mutation = async (newUser) => {
-    console.log(newUser);
     const res = await logIn(newUser);
-    console.log(res);
 
-    if(res.username) {
-      setUser(res);
+    if(res.user) {
+      localStorage.setItem("token", res.token);
+      localStorage.setItem("username", res.user.username);
+      setUser(res.user)
     } else {
-      toast("Error occured in logging in");
+      setErrorMessage("There was an error loggin in, try again with right credentials")
     }
   }
 
@@ -25,7 +25,7 @@ const UserContextProvider = (props) => {
   };
 
   return (
-    <UserContext.Provider value={{ user, mutation, logout }}>
+    <UserContext.Provider value={{ user, mutation, logout, errorMessage }}>
       {props.children}
     </UserContext.Provider>
   );

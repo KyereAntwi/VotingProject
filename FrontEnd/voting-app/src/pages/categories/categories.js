@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import {Alert, NavLink} from 'react-bootstrap';
 import { useQuery } from "react-query";
 import Category from "../../components/category/category";
 
