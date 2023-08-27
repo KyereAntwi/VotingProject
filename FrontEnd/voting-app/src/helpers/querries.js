@@ -1,4 +1,4 @@
-const BASE_URL = "https://localhost:5001/api/V1";
+const BASE_URL = "https://myvotingapi.azurewebsites.net/api/V1";
 
 export const fetchPolls = async () => {
   const token = localStorage.getItem("token");

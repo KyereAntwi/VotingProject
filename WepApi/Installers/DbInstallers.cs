@@ -10,7 +10,7 @@ namespace WepApi.Installers
         public void InstallServices(IConfiguration configuration, IServiceCollection services)
         {
             services.AddDbContext<DTOs.Data.DbContext>(options =>
-                options.UseSqlServer(
+                options.UseSqlite(
                     configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("WepApi")));
             services.AddIdentityCore<IdentityUser>(options => 
             {

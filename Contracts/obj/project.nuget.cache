@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "sPg8aGTF5gZTChNBpz3RgCnQxKDuM4w9T2eke5v0F3U26aZqSDCBBRXJ8AqdUaBZunY0tGOX16J80sbySAF8Dg==",
+  "dgSpecHash": "WN1608EPTWA2Nd/ap6NtTUzoUR3/Na2etgBVQzcESVvN11573D1SDo3GZzPdi9muQ62Y+gY/o63FMD27flzLAQ==",
   "success": true,
-  "projectFilePath": "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\Contracts\\Contracts.csproj",
+  "projectFilePath": "/Users/kyere/Desktop/VotingProject/Contracts/Contracts.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Kyere Antwi\\.nuget\\packages\\microsoft.aspnetcore.http.features\\3.1.5\\microsoft.aspnetcore.http.features.3.1.5.nupkg.sha512",
-    "C:\\Users\\Kyere Antwi\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.5\\microsoft.extensions.primitives.3.1.5.nupkg.sha512",
-    "C:\\Users\\Kyere Antwi\\.nuget\\packages\\system.io.pipelines\\4.7.1\\system.io.pipelines.4.7.1.nupkg.sha512"
+    "/Users/kyere/.nuget/packages/microsoft.aspnetcore.http.features/3.1.5/microsoft.aspnetcore.http.features.3.1.5.nupkg.sha512",
+    "/Users/kyere/.nuget/packages/microsoft.extensions.primitives/3.1.5/microsoft.extensions.primitives.3.1.5.nupkg.sha512",
+    "/Users/kyere/.nuget/packages/system.io.pipelines/4.7.1/system.io.pipelines.4.7.1.nupkg.sha512",
+    "/Users/kyere/.nuget/packages/microsoft.netcore.app.ref/3.1.0/microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "/Users/kyere/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.10/microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
   ],
   "logs": []
 }

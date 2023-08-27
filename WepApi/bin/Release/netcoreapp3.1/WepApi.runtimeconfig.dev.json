@@ -1,10 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\Kyere Antwi\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Kyere Antwi\\.nuget\\packages",
-      "C:\\Microsoft\\Xamarin\\NuGet",
-      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      "/Users/kyere/.dotnet/store/|arch|/|tfm|",
+      "/Users/kyere/.nuget/packages"
     ]
   }
 }

@@ -1,33 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\WepApi\\WepApi.csproj": {}
+    "/Users/kyere/Desktop/VotingProject/WepApi/WepApi.csproj": {}
   },
   "projects": {
-    "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\Contracts\\Contracts.csproj": {
+    "/Users/kyere/Desktop/VotingProject/Contracts/Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\Contracts\\Contracts.csproj",
+        "projectUniqueName": "/Users/kyere/Desktop/VotingProject/Contracts/Contracts.csproj",
         "projectName": "Contracts",
-        "projectPath": "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\Contracts\\Contracts.csproj",
-        "packagesPath": "C:\\Users\\Kyere Antwi\\.nuget\\packages\\",
-        "outputPath": "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\Contracts\\obj\\",
+        "projectPath": "/Users/kyere/Desktop/VotingProject/Contracts/Contracts.csproj",
+        "packagesPath": "/Users/kyere/.nuget/packages/",
+        "outputPath": "/Users/kyere/Desktop/VotingProject/Contracts/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Kyere Antwi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/kyere/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -57,43 +50,47 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.5.21302.13\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.307/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\DTOs\\DTOs.csproj": {
+    "/Users/kyere/Desktop/VotingProject/DTOs/DTOs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\DTOs\\DTOs.csproj",
+        "projectUniqueName": "/Users/kyere/Desktop/VotingProject/DTOs/DTOs.csproj",
         "projectName": "DTOs",
-        "projectPath": "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\DTOs\\DTOs.csproj",
-        "packagesPath": "C:\\Users\\Kyere Antwi\\.nuget\\packages\\",
-        "outputPath": "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\DTOs\\obj\\",
+        "projectPath": "/Users/kyere/Desktop/VotingProject/DTOs/DTOs.csproj",
+        "packagesPath": "/Users/kyere/.nuget/packages/",
+        "outputPath": "/Users/kyere/Desktop/VotingProject/DTOs/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Kyere Antwi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/kyere/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -127,54 +124,58 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.5.21302.13\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.307/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\Repositories\\Repositories.csproj": {
+    "/Users/kyere/Desktop/VotingProject/Repositories/Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\Repositories\\Repositories.csproj",
+        "projectUniqueName": "/Users/kyere/Desktop/VotingProject/Repositories/Repositories.csproj",
         "projectName": "Repositories",
-        "projectPath": "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\Repositories\\Repositories.csproj",
-        "packagesPath": "C:\\Users\\Kyere Antwi\\.nuget\\packages\\",
-        "outputPath": "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\Repositories\\obj\\",
+        "projectPath": "/Users/kyere/Desktop/VotingProject/Repositories/Repositories.csproj",
+        "packagesPath": "/Users/kyere/.nuget/packages/",
+        "outputPath": "/Users/kyere/Desktop/VotingProject/Repositories/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Kyere Antwi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/kyere/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\Contracts\\Contracts.csproj": {
-                "projectPath": "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\Contracts\\Contracts.csproj"
+              "/Users/kyere/Desktop/VotingProject/Contracts/Contracts.csproj": {
+                "projectPath": "/Users/kyere/Desktop/VotingProject/Contracts/Contracts.csproj"
               },
-              "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\DTOs\\DTOs.csproj": {
-                "projectPath": "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\DTOs\\DTOs.csproj"
+              "/Users/kyere/Desktop/VotingProject/DTOs/DTOs.csproj": {
+                "projectPath": "/Users/kyere/Desktop/VotingProject/DTOs/DTOs.csproj"
               }
             }
           }
@@ -228,57 +229,62 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.5.21302.13\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.307/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\WepApi\\WepApi.csproj": {
+    "/Users/kyere/Desktop/VotingProject/WepApi/WepApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\WepApi\\WepApi.csproj",
+        "projectUniqueName": "/Users/kyere/Desktop/VotingProject/WepApi/WepApi.csproj",
         "projectName": "WepApi",
-        "projectPath": "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\WepApi\\WepApi.csproj",
-        "packagesPath": "C:\\Users\\Kyere Antwi\\.nuget\\packages\\",
-        "outputPath": "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\WepApi\\obj\\",
+        "projectPath": "/Users/kyere/Desktop/VotingProject/WepApi/WepApi.csproj",
+        "packagesPath": "/Users/kyere/.nuget/packages/",
+        "outputPath": "/Users/kyere/Desktop/VotingProject/WepApi/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Kyere Antwi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/kyere/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/usr/local/share/dotnet/library-packs": {},
+          "/usr/local/share/dotnet/sdk/7.0.307/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\Contracts\\Contracts.csproj": {
-                "projectPath": "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\Contracts\\Contracts.csproj"
+              "/Users/kyere/Desktop/VotingProject/Contracts/Contracts.csproj": {
+                "projectPath": "/Users/kyere/Desktop/VotingProject/Contracts/Contracts.csproj"
               },
-              "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\DTOs\\DTOs.csproj": {
-                "projectPath": "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\DTOs\\DTOs.csproj"
+              "/Users/kyere/Desktop/VotingProject/DTOs/DTOs.csproj": {
+                "projectPath": "/Users/kyere/Desktop/VotingProject/DTOs/DTOs.csproj"
               },
-              "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\Repositories\\Repositories.csproj": {
-                "projectPath": "E:\\BackUps\\Projects\\DevWeb\\VotingProject\\Repositories\\Repositories.csproj"
+              "/Users/kyere/Desktop/VotingProject/Repositories/Repositories.csproj": {
+                "projectPath": "/Users/kyere/Desktop/VotingProject/Repositories/Repositories.csproj"
               }
             }
           }
@@ -325,6 +331,10 @@
               "target": "Package",
               "version": "[3.1.2, )"
             },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.32, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[3.1.2, )"
@@ -344,14 +354,23 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
           "downloadDependencies": [
             {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.15, 3.1.15]"
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-x64",
+              "version": "[3.1.32, 3.1.32]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
             }
           ],
           "frameworkReferences": {
@@ -362,7 +381,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.5.21302.13\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.307/RuntimeIdentifierGraph.json"
         }
       }
     }
